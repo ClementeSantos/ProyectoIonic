@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let pc of componentes">
+    <ion-card-header>
+      {{ pc.item }}
+      <ion-card-content>
+        <img [src]="pc.image">
+        <h1 class="colorprecio">{{ pc.price }}</h1>
+        <ion-item class="estrellas" lines="none">
+          <ion-icon *ngFor="let val of pc.stars" name="star" slot="end"></ion-icon>
+        </ion-item>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

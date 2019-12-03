@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-title>ThatPC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-item>
+          <ion-label class="label2" position="stacked">Email</ion-label>
+          <ion-input placeholder="Enter your email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label class="label1" position="stacked">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Enter your password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+    </ion-card>  
+    <br><br>
+    <ion-button expand="block" size="large" (click)="onLogin()">Acceder</ion-button>
+    <br>
+    <a class="LinkCenter" (click)="goToSignup()"><p>Crear una cuenta</p></a>
+
+</ion-content>

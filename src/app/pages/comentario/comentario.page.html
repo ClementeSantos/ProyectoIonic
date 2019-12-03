@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Comentarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 class="formtext">Deja aqui alguna sugerencia sobre la aplicación:</h2><br>
+  <ion-item>
+  <ion-input placeholder="escribe tu comentario..." [(ngModel)]="task.title"></ion-input>
+  </ion-item><br>
+  <ion-button expand="full" (click)="saveTask()">Guardar</ion-button>
+  <br>
+  <p text-center>Estos son algunos de los comentarios: </p>
+
+  <ion-card>
+    <ion-item *ngFor="let t of tasks" lines="full">
+      <ion-label>{{ t.title }}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
